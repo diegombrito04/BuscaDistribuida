@@ -1,4 +1,5 @@
 com\busca\distribuida\App.class
 com\busca\distribuida\server\ServerA.class
 com\busca\distribuida\client\Client.class
+com\busca\distribuida\server\ServerB.class
 com\busca\distribuida\JsonParser.class

@@ -22,8 +22,44 @@
             <artifactId>exec-maven-plugin</artifactId>
             <version>3.0.0</version>
             <configuration>
+                <!-- Classe padrão para execução -->
                 <mainClass>com.busca.distribuida.client.Client</mainClass>
             </configuration>
+            <executions>
+                <!-- Execução para o Cliente -->
+                <execution>
+                    <id>run-client</id>
+                    <phase>none</phase>
+                    <goals>
+                        <goal>java</goal>
+                    </goals>
+                    <configuration>
+                        <mainClass>com.busca.distribuida.client.Client</mainClass>
+                    </configuration>
+                </execution>
+                <!-- Execução para o Servidor A -->
+                <execution>
+                    <id>run-server-a</id>
+                    <phase>none</phase>
+                    <goals>
+                        <goal>java</goal>
+                    </goals>
+                    <configuration>
+                        <mainClass>com.busca.distribuida.server.ServerA</mainClass>
+                    </configuration>
+                </execution>
+                <!-- Execução para o Servidor B -->
+                <execution>
+                    <id>run-server-b</id>
+                    <phase>none</phase>
+                    <goals>
+                        <goal>java</goal>
+                    </goals>
+                    <configuration>
+                        <mainClass>com.busca.distribuida.server.ServerB</mainClass>
+                    </configuration>
+                </execution>
+            </executions>
         </plugin>
     </plugins>
 </build>
